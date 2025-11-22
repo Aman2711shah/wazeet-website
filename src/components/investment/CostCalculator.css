@@ -1,0 +1,102 @@
+.cost-calculator {
+    padding: 4rem 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.calculator-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.calculator-form {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-dim);
+    font-size: 0.9rem;
+}
+
+.form-group select,
+.form-group input {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.form-group select:focus,
+.form-group input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.total-display {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total-display span {
+    font-size: 1.1rem;
+    color: var(--color-text-dim);
+}
+
+.total-display .amount {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #4ade80;
+}
+
+.disclaimer {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: var(--color-text-dim);
+    font-style: italic;
+    text-align: center;
+}
+
+.calculator-chart {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.calculator-chart h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .calculator-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}

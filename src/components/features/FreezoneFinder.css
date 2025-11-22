@@ -1,0 +1,195 @@
+.freezone-section {
+    padding: 6rem 2rem;
+    background: linear-gradient(180deg, #0f172a 0%, var(--color-bg) 100%);
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.freezone-container {
+    max-width: 800px;
+    width: 100%;
+}
+
+.freezone-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.freezone-header h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #fff, #60a5fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.freezone-header p {
+    color: var(--color-text-dim);
+    font-size: 1.1rem;
+}
+
+.wizard-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    padding: 3rem;
+    backdrop-filter: blur(10px);
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.question-view {
+    width: 100%;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--color-secondary);
+    transition: width 0.3s ease;
+}
+
+.question-view h3 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: white;
+    text-align: center;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.option-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 16px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s;
+    color: white;
+}
+
+.option-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--color-secondary);
+    transform: translateY(-5px);
+}
+
+.option-card .material-icons {
+    font-size: 2.5rem;
+    color: var(--color-secondary);
+}
+
+.option-card span:last-child {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Result View */
+.result-view {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.result-badge {
+    background: rgba(74, 222, 128, 0.1);
+    color: #4ade80;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.result-view h3 {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.price-tag {
+    font-size: 1.5rem;
+    color: var(--color-text-dim);
+}
+
+.features-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 1rem 0 2rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.75rem 1.25rem;
+    border-radius: 12px;
+}
+
+.feature-item .material-icons {
+    color: var(--color-secondary);
+    font-size: 1.2rem;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.primary-btn {
+    background: var(--color-secondary);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.primary-btn:hover {
+    background: var(--color-secondary-glow);
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background: transparent;
+    color: var(--color-text-dim);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.secondary-btn:hover {
+    color: white;
+    border-color: white;
+}

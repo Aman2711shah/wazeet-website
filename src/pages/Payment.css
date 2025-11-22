@@ -1,0 +1,45 @@
+.payment-page {
+    padding: 120px 0 60px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.payment-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.payment-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.payment-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #fff 0%, #a5b4fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.payment-header p {
+    color: var(--color-text-dim);
+    font-size: 1.1rem;
+}
+
+.back-btn {
+    display: block;
+    margin: 2rem auto 0;
+    background: none;
+    border: none;
+    color: var(--color-text-dim);
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.back-btn:hover {
+    color: white;
+}

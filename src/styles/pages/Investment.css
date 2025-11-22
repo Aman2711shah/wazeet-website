@@ -1,0 +1,54 @@
+.investment-page {
+    width: 100%;
+}
+
+.investment-content {
+    padding: 2rem 0;
+}
+
+.tax-info {
+    padding: 4rem 2rem;
+    background: rgba(30, 41, 59, 0.5);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.info-card {
+    padding: 3rem 2rem;
+    background: rgba(15, 23, 42, 0.5);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: 16px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    border-color: #6366f1;
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+}
+
+.info-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.info-card .rate {
+    font-size: 4rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+}
+
+.info-card p:last-child {
+    color: #94a3b8;
+    font-size: 1.1rem;
+}

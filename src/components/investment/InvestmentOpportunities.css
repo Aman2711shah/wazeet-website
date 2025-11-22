@@ -1,0 +1,154 @@
+.investment-opportunities {
+    padding: 4rem 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4));
+}
+
+.charts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.chart-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+.chart-card h3 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: var(--color-text-dim);
+    font-size: 1.1rem;
+}
+
+.chart-container {
+    width: 100%;
+    height: 300px;
+}
+
+.sectors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.sector-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.sector-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(99, 102, 241, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.sector-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background: rgba(99, 102, 241, 0.1);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+.sector-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.sector-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.stat .label {
+    font-size: 0.8rem;
+    color: var(--color-text-dim);
+}
+
+.stat .value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+}
+
+.stat .value.positive {
+    color: #4ade80;
+}
+
+.opportunities-list h4 {
+    font-size: 0.9rem;
+    color: var(--color-text-dim);
+    margin-bottom: 0.75rem;
+}
+
+.opportunities-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.opportunities-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0.5rem;
+}
+
+.bullet {
+    color: var(--color-primary);
+}
+
+.learn-more-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.9rem;
+}
+
+.learn-more-btn:hover {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+    .charts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .chart-container {
+        height: 250px;
+    }
+}

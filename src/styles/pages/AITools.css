@@ -1,0 +1,62 @@
+.ai-tools-page {
+    width: 100%;
+}
+
+.tools-grid-section {
+    padding: 4rem 2rem;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.tool-card {
+    padding: 2.5rem;
+    background: rgba(15, 23, 42, 0.5);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: 16px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.tool-card:hover {
+    border-color: #6366f1;
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+}
+
+.tool-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+.tool-card h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.tool-card p {
+    color: #94a3b8;
+    margin-bottom: 2rem;
+}
+
+.tool-button {
+    padding: 0.875rem 2rem;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.tool-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
+}
+
+.tool-section {
+    padding: 2rem 0;
+}
