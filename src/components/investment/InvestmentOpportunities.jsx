@@ -17,11 +17,7 @@ export default function InvestmentOpportunities() {
         marketSize: parseFloat(sector.marketSize)
     })).sort((a, b) => b.growth - a.growth).slice(0, 6);
 
-    const costData = sectorOpportunities.map(sector => ({
-        name: sector.name,
-        min: sector.opportunities[0].estimatedCost.min,
-        max: sector.opportunities[0].estimatedCost.max
-    })).slice(0, 5);
+
 
     return (
         <section className="investment-opportunities">

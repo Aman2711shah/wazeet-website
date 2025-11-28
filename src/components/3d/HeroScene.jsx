@@ -3,9 +3,9 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, Stars, Sphere, MeshDistortMaterial, Points, PointMaterial } from '@react-three/drei';
 import * as THREE from 'three';
 
-function FloatingParticles() {
+function FloatingParticles({ count = 100 }) {
   const ref = useRef();
-  const particleCount = 500;
+  const particleCount = count;
 
   const positions = useMemo(() => {
     const positions = new Float32Array(particleCount * 3);
@@ -70,8 +70,8 @@ function Earth() {
       onPointerOver={() => setHovered(true)}
       onPointerOut={() => setHovered(false)}
     >
-      {/* Realistic Earth Sphere with HD texture */}
-      <Sphere args={[2.5, 128, 128]}>
+      {/* Realistic Earth Sphere with HD texture - Ultra Optimized geometry */}
+      <Sphere args={[2.5, 32, 32]}>
         <meshStandardMaterial
           map={earthTexture}
           metalness={0.1}
@@ -81,8 +81,8 @@ function Earth() {
         />
       </Sphere>
 
-      {/* Atmospheric glow - layer 1 (inner) */}
-      <Sphere ref={atmosphereRef} args={[2.65, 64, 64]}>
+      {/* Atmospheric glow - layer 1 (inner) - Ultra Optimized geometry */}
+      <Sphere ref={atmosphereRef} args={[2.65, 24, 24]}>
         <meshBasicMaterial
           color="#4dabf7"
           transparent
@@ -92,8 +92,8 @@ function Earth() {
         />
       </Sphere>
 
-      {/* Atmospheric glow - layer 2 (outer) */}
-      <Sphere args={[2.85, 64, 64]}>
+      {/* Atmospheric glow - layer 2 (outer) - Ultra Optimized geometry */}
+      <Sphere args={[2.85, 24, 24]}>
         <meshBasicMaterial
           color="#74c0fc"
           transparent
@@ -128,18 +128,18 @@ export default function HeroScene() {
           <pointLight position={[5, 5, 10]} intensity={0.3} color="#74c0fc" />
 
           {/* Background stars */}
+          {/* Background stars - Ultra Optimized */}
           <Stars
             radius={100}
             depth={50}
-            count={5000}
+            count={500}
             factor={4}
             saturation={0}
-            fade
             speed={1}
           />
 
-          {/* Floating particles */}
-          <FloatingParticles />
+          {/* Floating particles - Optimized */}
+          <FloatingParticles count={100} />
 
           {/* Main Earth */}
           <Earth />

@@ -3,9 +3,9 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { Stars, Sphere, Points, PointMaterial, Trail } from '@react-three/drei';
 import * as THREE from 'three';
 
-function FloatingParticles() {
+function FloatingParticles({ count = 50 }) {
     const ref = useRef();
-    const particleCount = 300;
+    const particleCount = count;
 
     const positions = useMemo(() => {
         const positions = new Float32Array(particleCount * 3);
@@ -167,7 +167,8 @@ export default function GlobalBackground() {
             top: 0,
             left: 0,
             zIndex: 0,
-            pointerEvents: 'none' // Allow clicks to pass through to content
+            pointerEvents: 'none', // Allow clicks to pass through to content
+            background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)'
         }}>
             <Canvas camera={{ position: [0, 0, 8], fov: 75 }}>
                 <Suspense fallback={null}>
@@ -176,25 +177,23 @@ export default function GlobalBackground() {
                     <directionalLight position={[10, 5, 5]} intensity={1.2} color="#ffffff" />
                     <pointLight position={[-10, -5, -5]} intensity={0.3} color="#4dabf7" />
 
-                    {/* Background stars */}
+                    {/* Background stars - Ultra Optimized */}
                     <Stars
                         radius={100}
                         depth={50}
-                        count={3000}
+                        count={500}
                         factor={4}
                         saturation={0}
-                        fade
                         speed={0.5}
                     />
 
-                    {/* Floating particles */}
-                    <FloatingParticles />
+                    {/* Floating particles - Optimized */}
+                    <FloatingParticles count={50} />
 
                     {/* Comet Effect */}
                     <Comet />
 
-                    {/* Earth in corner */}
-                    <Earth />
+
                 </Suspense>
             </Canvas>
         </div>

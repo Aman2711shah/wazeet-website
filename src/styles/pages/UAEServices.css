@@ -1,0 +1,353 @@
+/* UAE Services Page Styles */
+
+.uae-services-page {
+    color: #ffffff;
+    padding-top: 60px;
+    /* Space for fixed header */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    background: linear-gradient(to right, #fff, #a5b4fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Hero Section */
+.uae-hero {
+    padding: 8rem 0 6rem;
+    text-align: center;
+}
+
+.uae-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #ffffff, #cbd5e1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.uae-hero p {
+    font-size: 1.25rem;
+    color: #94a3b8;
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--color-primary);
+    color: white;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+.btn-primary:hover {
+    background: #4338ca;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Why UAE Section */
+.why-uae {
+    padding: 4rem 0;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.benefit-item {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.benefit-item .icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.benefit-item h3 {
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.benefit-item p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+}
+
+/* Core Services Section */
+.core-services {
+    padding: 6rem 0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background: rgba(15, 15, 37, 0.4);
+    /* Semi-transparent dark */
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 2.5rem;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-primary);
+    box-shadow: 0 10px 30px -10px rgba(79, 70, 229, 0.3);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.service-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.service-card li {
+    color: #cbd5e1;
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 0.95rem;
+}
+
+.service-card li::before {
+    content: "•";
+    color: var(--color-primary);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* How It Works */
+.how-it-works {
+    padding: 6rem 0;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+}
+
+.step-card {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 2rem;
+    position: relative;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background: var(--color-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.step-card h3 {
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.step-card p {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+/* Why Choose Wazeet */
+.why-choose {
+    padding: 6rem 0;
+}
+
+.reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.reason-card {
+    padding: 2rem;
+    border-left: 3px solid var(--color-primary);
+    background: linear-gradient(90deg, rgba(79, 70, 229, 0.1) 0%, transparent 100%);
+}
+
+.reason-card h3 {
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.reason-card p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+}
+
+/* Use Cases */
+.use-cases {
+    padding: 4rem 0;
+}
+
+.cases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.case-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.case-card h3 {
+    color: var(--color-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.case-card p {
+    color: #cbd5e1;
+}
+
+/* FAQ */
+.faq-section {
+    padding: 6rem 0;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.faq-item {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+.faq-item h4 {
+    color: white;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.faq-item p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Final CTA */
+.final-cta {
+    padding: 6rem 0 8rem;
+    text-align: center;
+}
+
+.final-cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.final-cta p {
+    font-size: 1.2rem;
+    color: #94a3b8;
+    margin-bottom: 2.5rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .uae-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-buttons,
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+}

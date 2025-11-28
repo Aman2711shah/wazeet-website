@@ -13,6 +13,7 @@ import Payment from './pages/Payment';
 import PaymentSuccess from './pages/PaymentSuccess';
 import BlogPost from './pages/BlogPost';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import Careers from './pages/Careers';
 import './App.css';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/" element={<PageLayout />}>
           <Route index element={<Home />} />
           <Route path="services" element={<Services />} />
+          <Route path="careers" element={<Careers />} />
           <Route path="ai-tools" element={<AITools />} />
           <Route path="freezones" element={<Freezones />} />
           <Route path="investment" element={<Investment />} />

@@ -1,53 +1,298 @@
+/* src/styles/pages/Freezones.css */
 .freezones-page {
     width: 100%;
+    padding-top: 80px;
+    /* Account for fixed header */
 }
 
-.popular-freezones {
-    padding: 4rem 2rem;
-}
-
-.popular-freezones h2 {
+.page-hero {
+    padding: 6rem 0 4rem;
     text-align: center;
+    background: radial-gradient(circle at center, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+}
+
+.page-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.page-hero p {
+    font-size: 1.25rem;
+    color: #94a3b8;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+}
+
+.stats-row {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 3rem;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-number {
     font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.freezones-directory {
+    padding: 4rem 0;
+}
+
+.filter-bar {
     margin-bottom: 3rem;
+    text-align: center;
+}
+
+.filter-bar h3 {
+    color: #cbd5e1;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.filter-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #cbd5e1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.filter-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: white;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.freezones-count {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 2rem;
 }
 
 .freezones-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
     gap: 2rem;
 }
 
 .freezone-card {
+    background: rgba(30, 41, 59, 0.4);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
     padding: 2rem;
-    background: rgba(15, 23, 42, 0.5);
-    border: 1px solid rgba(99, 102, 241, 0.2);
-    border-radius: 12px;
-    transition: all 0.3s;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .freezone-card:hover {
-    transform: translateY(-5px);
-    border-color: #6366f1;
-    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+    transform: translateY(-8px);
+    border-color: rgba(99, 102, 241, 0.3);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3);
+    background: rgba(30, 41, 59, 0.6);
+}
+
+.fz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.fz-icon {
+    font-size: 2.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.fz-rating {
+    background: rgba(251, 191, 36, 0.1);
+    color: #fbbf24;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
 }
 
 .freezone-card h3 {
     font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #6366f1;
-}
-
-.freezone-card .location {
-    color: #94a3b8;
+    color: white;
     margin-bottom: 0.5rem;
 }
 
-.freezone-card .specialty {
-    color: #cbd5e1;
-    font-style: italic;
+.fz-full-name {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    min-height: 2.7em;
 }
 
-.finder-section {
-    padding: 2rem 0;
+.fz-location {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.fz-specialization {
+    background: rgba(99, 102, 241, 0.1);
+    color: #818cf8;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+}
+
+.fz-description {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.fz-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+}
+
+.fz-detail {
+    font-size: 0.85rem;
+    color: #cbd5e1;
+}
+
+.fz-detail strong {
+    display: block;
+    color: #64748b;
+    margin-bottom: 0.25rem;
+}
+
+.fz-activities {
+    margin-bottom: 1.5rem;
+}
+
+.fz-activities strong {
+    display: block;
+    color: #cbd5e1;
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    background: rgba(255, 255, 255, 0.05);
+    color: #94a3b8;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.fz-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: auto;
+}
+
+.btn-primary-outline {
+    flex: 1;
+    padding: 0.75rem;
+    background: transparent;
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
+}
+
+.btn-primary-outline:hover {
+    background: var(--color-primary);
+    color: white;
+}
+
+.btn-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.btn-link:hover {
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .page-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .stats-row {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .filter-buttons {
+        flex-direction: row;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-bottom: 1rem;
+    }
 }

@@ -40,7 +40,13 @@ export default function AIBusinessChat() {
     const messagesEndRef = useRef(null);
     const [hoveredMessage, setHoveredMessage] = useState(null);
 
+    const isFirstRender = useRef(true);
+
     const scrollToBottom = () => {
+        if (isFirstRender.current) {
+            isFirstRender.current = false;
+            return;
+        }
         messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
     };
 
